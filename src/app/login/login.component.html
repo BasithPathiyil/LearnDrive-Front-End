@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LearnDrive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+           <form action="" [formGroup]="loginForm">
+            <div class="loginbox">
+                <label for="email"><b>Email :</b></label>
+                <input type="email" placeholder="Enter your email" class="form-control"  formControlName="email">
+                <br>
+                <label for="uname"><b>Password :</b></label>
+                <input type="password" name="password" id="" placeholder="Enter your password" class="form-control" formControlName="password">
+                <br>
+                <input (click)="login()" type="submit" class="btn btn-primary" value="Log In">
+            </div>
+          </form>
+            
+            <p>Not a user ? <a class="reg" routerLink="register">Register</a></p>
+        </div>
+        <div class="col-4"></div>
+        
+    </div>
+</div>

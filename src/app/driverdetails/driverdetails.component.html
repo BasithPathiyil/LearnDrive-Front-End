@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LearnDrive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Home</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <button (click)="logout()" class="btn btn-danger" type="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+</nav>
+<div *ngIf="product" class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card" style="width: 18rem;" >
+                <div class="card-body">
+                  <h5 class="card-title">Name : {{product.name}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Age : {{product.age}}</li>
+                  <li class="list-group-item">Location : {{product.location}}</li>
+                  <li class="list-group-item">Vehicle : {{product.vehicles}}</li>
+                  <li class="list-group-item">Gender: {{product.gender}}</li>
+                  <li class="list-group-item">Mobile Number: {{product.mobilenumber}}</li>
+                  <li class="list-group-item">Email Id: {{product.emailid}}</li>
+                  
+                </ul>
+                <div class="card-body">
+                  
+                </div>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>

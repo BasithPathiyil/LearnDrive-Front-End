@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LearnDrive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Home</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <button (click)="logout()" class="btn btn-danger" type="submit">Log Out</button>
+        </form>
+      </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+           <form action="" [formGroup]="driverForm" >
+            <div class="registerbox">
+                
+                <br>
+                <label for="uname"><b>Name :</b></label>
+                <input type="text" placeholder="Enter your name" class="form-control"   formControlName="name">
+                <br>
+                <label for="Age"><b>Age :</b></label>
+                <input type="text" placeholder="Age: " class="form-control"   formControlName="age">
+                <br>
+                <label for="gender"><b>Gender :</b></label>
+                <select id="gender" name="vehicles" class="form-control" formControlName="gender">
+                    <option value="Female">Female</option>
+                    <option value="male">Male</option>
+                    
+                </select>
+                <br>
+                <label for="vehicles"><b>Choose vehicle type :</b></label>
+                <select id="vehicles" name="vehicles" class="form-control" formControlName="vehicles">
+                    <option value="car">Car</option>
+                    <option value="two_wheeler">Two Wheeler</option>
+                    
+                </select>
+                <br>
+                <label for="location"><b>Location :</b></label>
+                <input type="text" placeholder="Enter your location: " class="form-control"   formControlName="location">
+                <br>
+                <label for="uname"><b>Mobile Number :</b></label>
+                <input type="text" placeholder="Enter your mobile number:" class="form-control"   formControlName="mobilenumber">
+                <br>
+                <label for="emailid"><b>Email Id :</b></label>
+                <input type="text" placeholder="Enter your email id" class="form-control"   formControlName="emailid">
+                <br>
+                <input (click)="registerDriver()" type="submit" class="btn btn-primary" value="Register">
+            </div>
+          </form>
+        </div>
+        <div class="col-4"></div>
+
+    </div>
+</div>

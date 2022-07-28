@@ -1,0 +1,17 @@
+.dashboardText{
+    padding-top: 20%;
+}
+.bottom{
+    padding-top: 20px;
+}
+.drivers{
+    text-align: center;
+}
+.viewdrivers{
+    background-color: rgb(108, 125, 125);
+    width: 100%;
+    color: aliceblue;
+}
+.viewdrivers:hover{
+    background-color: rgb(69, 76, 76);
+}
