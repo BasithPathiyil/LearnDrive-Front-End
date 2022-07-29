@@ -26,12 +26,17 @@
             <div class="registerbox">
                 <label for="email"><b>Email :</b></label>
                 <input type="email" placeholder="Enter your email" class="form-control" name="" formControlName="email">
+                <div *ngIf="this.registerForm.get('email')?.touched&&this.registerForm.get('email')?.errors" style="color: red;">Invalid email</div>
                 <br>
                 <label for="uname"><b>Username :</b></label>
                 <input type="text" placeholder="Enter your name" class="form-control"   formControlName="username">
+                <div *ngIf="this.registerForm.get('username')?.touched&&this.registerForm.get('username')?.errors" style="color: red;">Invalid username</div>
+
                 <br>
                 <label for="uname"><b>Password :</b></label>
                 <input type="password" name="password" id="" placeholder="Enter your password" class="form-control" formControlName="password">
+                <div *ngIf="this.registerForm.get('password')?.touched&&this.registerForm.get('Password')?.errors" style="color: red;">Invalid password</div>
+
                 <br>
                 <input (click)="register()" type="submit" class="btn btn-primary" value="Register">
             </div>

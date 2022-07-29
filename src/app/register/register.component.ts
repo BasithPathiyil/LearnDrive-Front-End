@@ -13,9 +13,9 @@ export class RegisterComponent implements OnInit {
   email=""
   username=""
   registerForm = this.fb.group({
-    email : ['',Validators.required],
-    username : [''],
-    password : ['']
+    email : ['',[Validators.required,Validators.email]],
+    username : ['',[Validators.required]],
+    password : ['',[Validators.required]]
   })
   constructor(private fb : FormBuilder,private ds : DataService,private router:Router) { }
 
@@ -25,13 +25,17 @@ export class RegisterComponent implements OnInit {
     var email = this.registerForm.value.email
     var username = this.registerForm.value.username
     var password = this.registerForm.value.password
-    
-     this.ds.register(email,username,password).subscribe((result:any)=>{
-      alert(result.message)
-      this.router.navigateByUrl('')
-     },result=>{
-      alert(result.error.message)
-     })
+    if(this.registerForm.valid){
+      this.ds.register(email,username,password).subscribe((result:any)=>{
+        alert(result.message)
+        this.router.navigateByUrl('')
+       },result=>{
+        alert(result.error.message)
+       })
+    }else{
+      alert("Invalid Form")
+    }
+     
     
   }
 
